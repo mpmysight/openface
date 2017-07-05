@@ -41,23 +41,23 @@ img {
     bottom: 330px;
     position: absolute;
     right: 0;
-    left: 0;
+    //left: 0;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    width: 80%;
+    width: 34%;
     height: 310px;
     /* overflow-y: scroll; */
 }
 
 .container .content {
-    top: 350px;
+    top: 40px;
     bottom: 0;
     position: absolute;
-    right: 0;
-    left: 0;
+    //right: 0;
+    left: 3%;
     margin: auto;
-    width: 80%;
+    width: 60%;
     height: auto;
     overflow-y: scroll;
 }
@@ -86,8 +86,8 @@ ul.tabs li.current{
 
 .tab-content{
     display: none;
-    /* background: #ededed; */
-    /* padding: 15px; */
+    background: #ededed;
+    padding: 5px;
 }
 
 .tab-content.current{
