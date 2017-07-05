@@ -192,12 +192,12 @@ function createSocket(address, name) {
             });
             redrawPeople();
         } else if (j.type == "IDENTITIES") {
-            var h = "Last updated: " + (new Date()).toTimeString();
+            var h = "Last Updated: <b>" + (new Date()).toTimeString()+"</b>";
             h += "<ul>";
             var len = j.identities.length
             if (len > 0) {
                 for (var i = 0; i < len; i++) {
-                    var identity = "Unknown";
+                    var identity = "Unknown person";
                     var idIdx = j.identities[i];
                     if (idIdx != -1) {
                         identity = people[idIdx];
