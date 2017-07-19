@@ -201,11 +201,18 @@ function createSocket(address, name) {
                     var idIdx = j.identities[i];
                     if (idIdx != -1) {
                         identity = people[idIdx];
+						$('#openmrs-link-button').attr("value","Open "+identity);
+						$('#openmrs-link').val("http://localhost:8080/openmrs/module/facialrecog/facehome.list#!/searchPatient?patientId="+identity);
+						$('#openmrs-link-button').show();
                     }
+					else{
+						$('#openmrs-link-button').hide();
+					}
                     h += "<li>" + identity + "</li>";
                 }
             } else {
                 h += "<li>Nobody detected.</li>";
+				$('#openmrs-link-button').hide();
             }
             h += "</ul>"
             $("#peopleInVideo").html(h);
@@ -353,3 +360,8 @@ function changeServerCallback() {
         alert("Unrecognized server: " + $(this.html()));
     }
 }
+
+$("#openmrs-link-button").click(function(){
+  //window.open($("#openmrs-link").val(),'_blank');
+  window.open($("#openmrs-link").val(),'http://localhost:8080/openmrs');
+  });
