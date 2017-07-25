@@ -202,7 +202,7 @@ function createSocket(address, name) {
                     if (idIdx != -1) {
                         identity = people[idIdx];
 						$('#openmrs-link-button').attr("value","Open "+identity);
-						$('#openmrs-link').val("http://localhost:8080/openmrs/module/facialrecog/facehome.list#!/searchPatient?patientId="+identity);
+						$('#openmrs-link').val("http://41.89.165.22:8080/openmrs/module/facialrecog/facehome.list#!/searchPatient?patientId="+identity);
 						$('#openmrs-link-button').show();
                     }
 					else{
@@ -363,5 +363,6 @@ function changeServerCallback() {
 
 $("#openmrs-link-button").click(function(){
   //window.open($("#openmrs-link").val(),'_blank');
-  window.open($("#openmrs-link").val(),'http://localhost:8080/openmrs');
+  //window.open($("#openmrs-link").val(),'http://localhost:8080/openmrs');
+  window.open($("#openmrs-link").val(),'http://41.89.165.22:8080/openmrs');
   });
